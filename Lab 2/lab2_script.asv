@@ -1,8 +1,4 @@
-%Load Images
-load('boat512.mat');
-load('camera256.mat');
-load('goldhill512.mat');
-load('peppers512.mat');
+
 % Boat
 [boat512_S10, boat512_S40, boat512_S90] = compress_459(boat512);
 boat512_E10 = decompress_459(boat512_S10,10);
