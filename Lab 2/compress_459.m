@@ -1,9 +1,8 @@
 function [ S10, S40, S90 ] = compress_459 ( image )
 %compress_459 Returns compressed versions of image with q 10, 40, and 90
 %respectively.
-%
-%   Detailed explanation goes here.
 
+%JPEG Standard Q50 Matrix
 Q50 = [ 16 11 10 16 24 40 51 61;
         12 12 14 19 26 58 60 55;
         14 13 16 24 40 57 69 56;
@@ -14,7 +13,6 @@ Q50 = [ 16 11 10 16 24 40 51 61;
         72 92 95 98 112 100 103 99];
     
 % quality mats for q levels of 10, 40, 90
-
 Q10 = (50/10)*Q50;
 Q40 = (50/40)*Q50;
 Q90 = ((100-90)/50)*Q50;
