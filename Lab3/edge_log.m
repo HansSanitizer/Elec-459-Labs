@@ -12,7 +12,7 @@ function e = edge_log(x,N,sig,th)
 r = 2:(m-1);
 c = 2:(n-1);
 % Prepare a LoG mask and compute LoG of the image
-H=comp_log(N,sig);
+H = comp_log(N,sig);
 w = imfilter(x,H);
 e = zeros(m,n);
 % Arbitrarily choose the edge to be the negative point
